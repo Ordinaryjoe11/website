@@ -1,0 +1,67 @@
+.background {
+  background-color: white;
+}
+
+.background-form {
+  background: linear-gradient(#8cc1f9, #2b91fe, #7ab7f9);
+}
+
+html {
+  height: 100%;
+}
+
+input,
+textarea,
+select {
+  margin-bottom: 0.5rem;
+  border-radius: 7px;
+  padding: 0.3rem;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  border-radius: 20px;
+  margin-bottom: 1.5rem;
+}
+
+.contact-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 2rem;
+}
+
+label {
+  text-align: center;
+  padding: 4px;
+}
+
+.buttons {
+  text-align: center;
+}
+
+textarea {
+  height: 125px;
+}
+
+#myBtn {
+  display: none; /* Caché par défaut */
+  position: fixed; /* Position fixe */
+  bottom: 130px; /* Bouton en bas de la page */
+  right: 10px; /* 30px depuis la droite */
+  z-index: 99; /* Make sure it does not overlap */
+  border: none; /* Sans bordure */
+  outline: none; /* Sans surligne  */
+  background-color: rgb(255, 225, 0);
+  cursor: pointer; /* Souris en pointant*/
+  padding: 15px; 
+  border-radius: 10px;  
+  width: 60px;
+  height: 55px;
+}
+
+#myBtn:hover {
+  background-color: grey;
+}
