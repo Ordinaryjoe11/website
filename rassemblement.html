@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!--JS-->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
+    integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13"
+    crossorigin="anonymous"></script>
+  <!--Bootstrap CSS-->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  <link rel="stylesheet" href="style.css">
+  <title>Rassemblement</title>
+  <meta name="description" content="Renseignement sur la journée d'action de l'association QueDuSable">
+</head>
+
+<body>
+
+  <div class="container-fluid">
+    <header class="row bg-light sticky-top shadow">
+      <!--Bouton back on top-->
+      <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button> 
+      <!--Navbar-->
+      <nav class="navbar navbar-expand-lg navbar-light">
+        <!--<div class="container-fluid">-->
+        <a class="navbar-brand" href="#">
+          <img class="rounded" src="images/quedusable.png" alt="logo">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+          aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div class="navbar-nav">
+            <a class="nav-link" href="first-page.html#whoAreWe">Qui Sommes Nous</a>
+            <a class="nav-link" href="first-page.html#benefits">Les bienfaits</a>
+            <a class="nav-link" href="first-page.html#seeFurther">Voyons plus loin!</a>
+            <a class="nav-link" href="form.html" target="_blank">Participation</a>
+          </div>
+        </div>
+        <img src="images/plage.jpg" class="img-fluid rounded d-none d-lg-block" alt="Image d'une plage">
+      </nav>
+    </header>
+
+    <main class="row shadow background" style="--bs-bg-opacity: 0.4">
+
+      <article class="p-4 text-center m-auto">
+        <div class="row-cols-1 row-cols-lg-2 background-form rounded shadow">
+          <h1 class="p-5 d-inline-block"> <img src="icons-1.8.1/icons/calendar2.svg" width="35" height="35"
+              alt="Bootstrap">
+            Prochain Rassemblement
+            <img src="icons-1.8.1/icons/calendar2.svg" width="35" height="35" alt="Bootstrap">
+          </h1>
+          <p class="d-inline-block">Notre prochaine action aura lieu le 23 / 04 / 2022</p>
+
+          <p class="bg-warning rounded p-2 d-inline-block" id="countdown"></p>
+
+          <script>
+            // Date du rassemblement
+            var countDownDate = new Date("April 23, 2022 10:00:00").getTime();
+
+            // Update the count down every 1 second
+            var x = setInterval(function () {
+
+              // Date actuelle
+              var now = new Date().getTime();
+
+              // Distance en la date du rassemblement et date actuelle
+              var distance = countDownDate - now;
+
+              // Time calculations for days, hours, minutes and seconds
+              var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+              var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+              var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+              var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+              // Output the result in an element with id="demo"
+              document.getElementById("countdown").innerHTML = "Dans " + days + " Jours " + hours + " Heures "
+                + minutes + " Minutes " + seconds + " Secondes ";
+
+              // If the count down is over, write some text 
+              if (distance < 0) {
+                clearInterval(x);
+                document.getElementById("countdown").innerHTML = "A vos outils !!";
+              }
+            }, 1000);
+          </script>
+        </div>
+      </article>
+
+      <article class="row text-center m-auto">
+        <aside class="col-lg p-4">
+          <div class="shadow rounded background-form p-5 h-100">
+            <h4 class="p-4"><img src="icons-1.8.1/icons/info-circle.svg" width="35" height="35" alt="Bootstrap">
+              Informations Utiles
+              <img src="icons-1.8.1/icons/info-circle.svg" width="35" height="35" alt="Bootstrap">
+            </h4>
+            <h5>Matériels</h5>
+            <p>Vous pouvez amener vos propres outils de collectes, sinon des outils seront mis à votre disposition.</p>
+            <h5>Logistiques</h5>
+            <p>Etant une association bénévole, les trajets pour vous rendre au point
+              de rendez vous seront à vos frais.</p>
+            <h5>Repas</h5>
+            <p>Même principe que pour les trajets, prévoyez vos collations
+              ou prenez le temps pour un restaurant en bord de mer !</p>
+          </div>
+        </aside>
+
+        <aside class="col-lg p-4">
+          <div class="shadow rounded background-form p-5 h-100">
+            <h4 class="p-4"><img src="icons-1.8.1/icons/geo-alt.svg" width="35" height="35" alt="Boostrap">
+              Lieu de rendez-vous
+              <img src="icons-1.8.1/icons/geo-alt.svg" width="35" height="35" alt="Boostrap">
+            </h4>
+            <h5>Ville</h5>
+            <p>Saint Gilles Croix de Vie, située sur la côte atlantique, en Vendée.</p>
+            <h5>Plage</h5>
+            <p>La Grande Plage</p>
+            <h5>Coordonnées</h5>
+            <a href="https://www.google.com/maps/place/Prom.+Marie+de+Beaucaire,+85800+Saint-Gilles-Croix-de-Vie/
+            @46.6940971,-1.947324,1103m/data=!3m1!1e3!4m5!3m4!1s0x4804562aeb059879:
+            0x336bdb8e01e92a8d!8m2!3d46.694178!4d-1.943129" style="color: lightgrey" target="d_blank">Promenade Marie
+              Beaucaire</a>
+            <p>Suivre les panneaux indicant Le Belvedère</p>
+          </div>
+        </aside>
+      </article>
+
+      <article class="row text-center m-auto">
+        <aside class="col p-4">
+          <div class="shadow rounded background-form p-5">
+            <h4 class="p-4"><img src="icons-1.8.1/icons/box-arrow-in-right.svg" width="35" height="35" alt="Boostrap">
+              Inscriptions
+              <img src="icons-1.8.1/icons/box-arrow-in-left.svg" width="35" height="35" alt="Boostrap">
+            </h4>
+            <p>Pour nous notifier de votre présence, veuillez remplir ce 
+              <a href="form.html" target="_blank" style="color: lightgrey;">formulaire</a> !!!
+            </p>
+          </div>
+        </aside>
+      </article>
+    </main>
+  </div>
+
+  <footer class="container-fluid py-3 footer bg-light text-center">
+    <section class="row">
+      <div class="col-4 m-auto">
+        <img class="rounded" src="images/quedusable.png" alt="Logo">
+      </div>
+      <div class="col-4 m-auto">
+        <div> Nos liens QueDuSable
+        </div>
+        <div> 
+          <a href="" class="p-2"><img src="icons-1.8.1/icons/twitter.svg" alt="logo"></a>
+          <a href="" class="p-2"><img src="icons-1.8.1/icons/instagram.svg" alt="logo"></a>
+          <a href="" class="p-2"><img src="icons-1.8.1/icons/facebook.svg" alt="logo"></a>
+        </div>
+      </div>
+    </section>
+  </footer>
+<script src="fichier.js"></script>
+</body>
+
+</html>
