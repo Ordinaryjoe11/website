@@ -10,6 +10,10 @@ html {
   height: 100%;
 }
 
+body {
+  font-size: 1em;
+}
+
 input,
 textarea,
 select {
@@ -65,3 +69,13 @@ textarea {
 #myBtn:hover {
   background-color: grey;
 }
+
+@media (max-width: 641px) {
+body {
+    font-size: 0.9em;
+  }
+h1, h2, h3, h4, h5 {
+  font-size: 0.9em;
+  font-weight: bold;
+}
+} 
